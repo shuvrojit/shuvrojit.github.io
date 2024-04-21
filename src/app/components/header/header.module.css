@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap");
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.branding > h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Lato", sans-serif;
+}
+.branding > h2 {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: #00000f;
+  font-family: "Sedan", sans-serif;
+}
+
+.overlay {
+  font-family: "platypi", sans-serif;
+  font-size: 1rem;
+  /* height: 100%; */
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+}
+
+.overlay__right {
+  top: 0;
+  right: 0;
+}
+
+.overlay__left {
+  top: 0;
+  left: 0;
+}
+
+.overlay__content {
+  width: 100%;
+  transform: scale(1);
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  color: #000000;
+  /* color: #818181; */
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+@media screen and (max-width: 650px) {
+  .overlay {
+    display: none;
+    overflow-y: auto;
+  }
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.hamburger {
+  display: none;
+}
