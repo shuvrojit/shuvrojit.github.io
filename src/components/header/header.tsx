@@ -13,10 +13,12 @@ const Header = () => {
   return (
     <>
       <div className={styles.header__container}>
+          <Link href="/">
         <div className={styles.branding}>
           <h1>Shuvrojit Biswas</h1>
           <h2>Full Stack Developer & Desinger</h2>
         </div>
+          </Link>
         <div
           className={
             (toggle ? " overlay__content " : "") +
