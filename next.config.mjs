@@ -3,6 +3,11 @@ import createMDX from '@next/mdx'
 
 const nextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
+  basePath: "",
+  output: "export",
+  images: {
+  unoptimized: true,
+  },
   compiler: {
     styledComponents: true,
   },
