@@ -1,0 +1,98 @@
+`HEAD` is the current commit or pointer to the commit. It changes based
+on checkout.
+
+# Intro
+
+Git is a version controll system for your code.
+
+# Clone
+
+git <mark>clone</mark> –depth=1 just downloads the last commit and nothing else. It
+means you can't go back to the previous commits and see the changes.
+It's useful when you just want to download the code and don't want to
+contribute to the project. It's faster than the normal clone. For
+softwares which you are building just for installing and not for
+development.
+
+# Commit
+
+Always commit atomic units. Single feature at a time.
+
+Commit messages are really important. It makes you distinguish between a
+good developer and a bad one. Let's see how to write really good commit
+messages.
+
+Fix, Rework, Add, Update, Polish. Don't use anything in past form.
+
+Use active voice in the messages. Avoid using commit messages like
+saved, posted, updated, commit early and often.
+
+**The seven rules of good commit messages:**
+
+- Separate the subject line from the body with a blank line.
+- Keep the subject line under 50 characters long.
+- Capitalize the subject line.
+- Do not end the subject line with a period.
+- Use imperative sentences, active voice. use present form.
+- Wrap the body at 72 characters.
+- Use the body for what, why and how expalanations.
+
+Commit message verbs:
+
+- Rework
+- Add
+- Update
+- Fix
+- Refactor
+- Remove
+- Optimize
+- Implement
+- Merge
+- Revert
+- Test
+- Docs
+- Chore
+
+# Log
+
+# Git repository upload
+
+Create a repository in github and then do this. If you have ssh setup in
+your system with github authentication then use ssh version of the url.
+
+``` bash
+git remote set-url <https url from github>
+git push origin master
+# will ask for username and password
+```
+
+**Learn more about pre-commit and husky.**
+
+# Submodule
+
+Today we're going to talk about git submodule. How to add one git
+repository inside another git repo
+
+# FAQ
+
+How to remove a directory or file from tracked git. (from local git
+tracking)
+
+``` shell
+git -rm -r --cached directory/file
+git reset <dirnmae>
+```
+
+`How to edit recently commited message`
+
+``` shell
+git commit --amend -m "message"
+```
+
+# How to read code like it's a story?
+
+<mark>Today we will be discussing the fundamentals of why git was
+created in the first place.</mark>
+
+Git refs are just reference comments to specific commits. git tags are
+also part of refs.
