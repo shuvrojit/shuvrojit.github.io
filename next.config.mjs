@@ -6,7 +6,6 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  basePath: "/",
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   // Optionally, add any other Next.js config below
 }

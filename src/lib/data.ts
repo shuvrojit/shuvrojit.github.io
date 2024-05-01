@@ -15,7 +15,11 @@ export async function getMDXFileBySlug(slug: string) {
   try {
     const mdxContent = await import(`@/content/${slug}.mdx`);
     return mdxContent;
-  } catch (e) {
-    console.log(e);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error fetching data:", error.message);
+    } else {
+      console.error("Unexpected error:", error);
+    }
   }
 }
