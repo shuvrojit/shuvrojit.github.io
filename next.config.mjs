@@ -6,7 +6,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  output: 'export',
+  basePath: "/",
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   // Optionally, add any other Next.js config below
 }
