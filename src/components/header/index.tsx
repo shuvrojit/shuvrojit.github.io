@@ -107,7 +107,7 @@ const Header = () => {
         <NavTitle className={latoBold.className}>
           <Link href="/">Shuvrojit Biswas</Link>
         </NavTitle>
-        <NavList isopen={isOpen} className={latoMedium.className}>
+        <NavList $isopen={isOpen} className={latoMedium.className}>
           <NavItem>
             <Link href="/work">Work</Link>
           </NavItem>
