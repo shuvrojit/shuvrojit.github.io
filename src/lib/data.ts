@@ -12,6 +12,10 @@ export function getMDXFiles(dirPath: string): string[] {
 }
 
 export async function getMDXFileBySlug(slug: string) {
-  const mdxContent = await import(`@/content/${slug}.mdx`);
-  return mdxContent;
+  try {
+    const mdxContent = await import(`@/content/${slug}.mdx`);
+    return mdxContent;
+  } catch (e) {
+    throw new Error(`Error getting MDX file by slug: ${slug}`);
+  }
 }
