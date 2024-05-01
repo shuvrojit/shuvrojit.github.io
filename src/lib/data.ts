@@ -15,7 +15,7 @@ export async function getMDXFileBySlug(slug: string) {
   try {
     const mdxContent = await import(`@/content/${slug}.mdx`);
     return mdxContent;
-  } catch (error) {
-    console.log(error);
+  } catch (e) {
+    console.log(e);
   }
 }
