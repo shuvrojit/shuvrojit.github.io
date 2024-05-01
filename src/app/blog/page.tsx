@@ -13,10 +13,10 @@ const Blog = async () => {
       <h1>Latest Posts</h1>
 
       {files.length > 0
-        ? files.map(async (file) => {
+        ? files.map(async (file, index) => {
             const data = await getMDXFileBySlug(file);
             return (
-              <div>
+              <div key={index}>
                 <Link href={`/blog/${file.replace(".mdx", "")}`}>
                   <li>{data.metadata ? data.metadata.title : file}</li>
                 </Link>

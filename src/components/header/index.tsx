@@ -43,7 +43,6 @@ const NavList = styled.ul<{ isopen: boolean }>`
     top: 0;
     position: fixed;
     display: ${(props) => (props.isopen ? "flex" : "none")};
-    // display: ${({ isopen }) => (isOpen ? "flex" : "none")};
     background-color: #fff;
     width: 100%;
     height: 100%;
