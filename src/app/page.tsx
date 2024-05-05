@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,15 +9,16 @@ export default function Home() {
         <div className={styles.heroSection}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              Full Stack Developer & Designer based in Bangladesh
+              WebApp Designer & Developer based in Bangladesh
             </h1>
             <p className={styles.heroDescription}>
-              I help clients translate ideas into business products. I have
-              worked with a lot of cool people. Most recently @Lorem and @Ipsum
+              I help clients translate businesses or ideas into customer centric and functional platforms.
             </p>
             <div className={styles.heroActions}>
-              <button className={styles.seeWorksBtn}>See Works</button>
-              <button className={styles.hireBtn}>Hire Me</button>
+              <Link href="/contact">
+              <button className={styles.seeWorksBtn}>Got a project?</button>
+              <button className={styles.hireBtn}>Let's talk</button>
+                </Link>
             </div>
           </div>
           <Image

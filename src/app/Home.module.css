@@ -10,20 +10,23 @@
 }
 
 .heroSection {
+    margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .heroContent {
-  max-width: 600px;
+  max-width: 450px;
 }
 
 .heroTitle {
   font-family: "Lato", sans-serif;
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
   font-weight: 700;
+    line-height: normal;
+
 }
 
 .heroDescription {
@@ -55,13 +58,17 @@
   border: none;
   padding: 0.8rem 1.5rem;
   cursor: pointer;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 
 .hireBtn {
   background-color: white;
   color: black;
   border: 1px solid black;
+}
+
+.hireBtn:hover {
+  background-color: #98D9C2;
 }
 
 #hero-image {
