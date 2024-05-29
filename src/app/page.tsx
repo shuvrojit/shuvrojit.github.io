@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./Home.module.css";
 import Link from "next/link";
+import SkillData from "@/lib/skillData";
+import SkillCard from "@/components/body/skillCard";
 
 export default function Home() {
   return (
@@ -12,13 +14,14 @@ export default function Home() {
               WebApp Designer & Developer based in Bangladesh
             </h1>
             <p className={styles.heroDescription}>
-              I help clients translate businesses or ideas into customer centric and functional platforms.
+              I help clients translate businesses or ideas into customer centric
+              and functional platforms.
             </p>
             <div className={styles.heroActions}>
               <Link href="/contact">
-              <button className={styles.seeWorksBtn}>Got a project?</button>
-              <button className={styles.hireBtn}>Let's talk</button>
-                </Link>
+                <button className={styles.seeWorksBtn}>Got a project?</button>
+                <button className={styles.hireBtn}>Let's talk</button>
+              </Link>
             </div>
           </div>
           <Image
@@ -30,6 +33,18 @@ export default function Home() {
           />
         </div>
       </main>
+
+      <h2 className={styles.skillTitle}>Services I offer</h2>
+      <div className={styles.skillsContainer}>
+        {SkillData.map((skill, index) => (
+          <SkillCard
+            key={index}
+            title={skill.title}
+            description={skill.description}
+            link={skill.link}
+          />
+        ))}
+      </div>
 
       <footer className={styles.footer}>{/* Footer content */}</footer>
     </div>

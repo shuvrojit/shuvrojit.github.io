@@ -112,7 +112,7 @@ const Header = () => {
             <Link href="/work">Work</Link>
           </NavItem>
           <NavItem>
-            <Link href="/blog">Blog</Link>
+            <Link href="https://shuvrojit.github.io/blog">Blog</Link>
           </NavItem>
 
           <NavItem>
