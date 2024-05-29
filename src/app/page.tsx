@@ -20,7 +20,7 @@ export default function Home() {
             <div className={styles.heroActions}>
               <Link href="/contact">
                 <button className={styles.seeWorksBtn}>Got a project?</button>
-                <button className={styles.hireBtn}>Let's talk</button>
+                <button className={styles.hireBtn}>Let&apos;s talk</button>
               </Link>
             </div>
           </div>
