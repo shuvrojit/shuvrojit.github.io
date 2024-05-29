@@ -11,7 +11,7 @@ export default function Home() {
         <div className={styles.heroSection}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              WebApp Designer & Developer based in Bangladesh
+              Fullstack Developer & Designer based in Bangladesh
             </h1>
             <p className={styles.heroDescription}>
               I help clients translate businesses or ideas into customer centric
