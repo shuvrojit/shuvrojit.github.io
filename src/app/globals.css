@@ -1,15 +1,14 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-}
-* {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: #FEF6EB;
+    background-color: #fef6eb;
 }
 img,
 picture,

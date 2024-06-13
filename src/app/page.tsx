@@ -25,7 +25,7 @@ export default function Home() {
             </div>
           </div>
           <Image
-            id="hero-image"
+            className={styles.heroImage}
             src="/images/avatar.svg"
             alt="Picture of the author"
             width={300}
@@ -41,7 +41,8 @@ export default function Home() {
             key={index}
             title={skill.title}
             description={skill.description}
-            link={skill.link}
+            title_icon={skill.title_icon}
+            tools_icons={skill.tools_icons}
           />
         ))}
       </div>

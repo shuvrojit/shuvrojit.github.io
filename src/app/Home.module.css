@@ -71,10 +71,16 @@
     background-color: #98d9c2;
 }
 
-#hero-image {
+.heroImage {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .heroImage {
+        display: none;
+    }
 }
 
 .footer {
@@ -101,4 +107,13 @@
     width: 80vw;
     margin: 0 auto;
     margin-bottom: 5rem;
+}
+
+@media (max-width: 960px) {
+    .skillsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
 }
