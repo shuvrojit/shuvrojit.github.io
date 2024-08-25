@@ -1,52 +1,48 @@
+"use client";
 import Image from "next/image";
-import styles from "./Home.module.css";
 import Link from "next/link";
-import SkillData from "@/lib/skillData";
-import SkillCard from "@/components/body/skillCard";
+import styles from "./Home.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
-        <div className={styles.heroSection}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>
-              Fullstack Developer & Designer based in Bangladesh
-            </h1>
-            <p className={styles.heroDescription}>
-              I help clients translate businesses or ideas into customer centric
-              and functional platforms.
-            </p>
-            <div className={styles.heroActions}>
-              <Link href="/contact">
-                <button className={styles.seeWorksBtn}>Got a project?</button>
-                <button className={styles.hireBtn}>Let&apos;s talk</button>
-              </Link>
-            </div>
-          </div>
-          <Image
-            id="hero-image"
-            src="/images/avatar.svg"
-            alt="Picture of the author"
-            width={300}
-            height={300}
-          />
-        </div>
-      </main>
-
-      <h2 className={styles.skillTitle}>Services I offer</h2>
-      <div className={styles.skillsContainer}>
-        {SkillData.map((skill, index) => (
-          <SkillCard
-            key={index}
-            title={skill.title}
-            description={skill.description}
-            link={skill.link}
-          />
-        ))}
+      <Image
+        className={styles.profile__image}
+        src="/images/profile-pic.jpg"
+        alt="hero"
+        width={56}
+        height={56}
+      />
+      <h1 className={styles.title}>
+        {"Creating software \nthat functions seamlessly."}
+      </h1>
+      <p className={styles.description}>
+        Hi, I'm Shuvro, a freelance product designer from Bangladesh. Partnering
+        with companies to create digital interfaces that play a crucial role in
+        realising their objects for success.
+      </p>
+      <div className={styles.social__links}>
+        <p>email / shuvrojit.biswas17@gmail.com</p>
+        <p>
+          twitter /<Link href="https://x.com/shuv40"> @shuv40</Link>
+        </p>
+        <p>
+          linkedin /
+          <Link href="https://linkedin.com/in/shuvrojit"> shuvrojit</Link>
+        </p>
+        <p>
+          dribble /<Link href="https://dribbble.com/shuvrojit"> shuvrojit</Link>
+        </p>
       </div>
-
-      <footer className={styles.footer}>{/* Footer content */}</footer>
+      <div className={styles.action__buttons}>
+        <a href="mailto:shuvrojit.biswas17@gmail.com">
+          <button className={styles.email__button}>Reach out via email</button>
+        </a>
+        <div className={styles.available__container}>
+          <div className={styles.available__icon}></div>
+          <p className={styles.available__text}>Available for September</p>
+        </div>
+      </div>
     </div>
   );
 }
