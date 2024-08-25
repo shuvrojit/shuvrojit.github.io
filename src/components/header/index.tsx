@@ -20,7 +20,6 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   @media (max-width: 768px) {
     width: 100vw;
   }
@@ -31,7 +30,7 @@ const NavTitle = styled.h1`
   font-size: 1.2rem;
 `;
 
-const NavList = styled.ul<{ isopen: boolean }>`
+const NavList = styled.ul<{ $isopen?: boolean }>`
   font-size: 1rem;
   list-style: none;
   margin: 0;
@@ -42,7 +41,7 @@ const NavList = styled.ul<{ isopen: boolean }>`
     font-size: 1.5rem;
     top: 0;
     position: fixed;
-    display: ${(props) => (props.isopen ? "flex" : "none")};
+    display: ${(props) => (props.$isopen ? "flex" : "none")};
     background-color: #fff;
     width: 100%;
     height: 100%;
@@ -95,7 +94,7 @@ const HamburgerMenu = styled.div`
 `;
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -104,10 +103,7 @@ const Header = () => {
   return (
     <>
       <Nav>
-        <NavTitle className={latoBold.className}>
-          <Link href="/">Shuvrojit Biswas</Link>
-        </NavTitle>
-        <NavList isopen={isOpen} className={latoMedium.className}>
+        <NavList $isopen={isOpen} className={latoMedium.className}>
           <NavItem>
             <Link href="/work">Work</Link>
           </NavItem>
