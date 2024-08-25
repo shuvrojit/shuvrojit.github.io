@@ -17,8 +17,9 @@ const latoMedium = Lato({
 const Nav = styled.nav`
   width: 80vw;
   margin: 0 auto;
+padding: 2rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   @media (max-width: 768px) {
     width: 100vw;
