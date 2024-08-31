@@ -45,11 +45,15 @@ const WorksDescription = styled.p`
   margin-bottom: 20px;
 `;
 
-const ProjectView = ({ projectData }: ProjectInterface[]) => {
+interface ProjectViewProps {
+  projectData: ProjectInterface[];
+}
+
+const ProjectView = ({projectData}: ProjectViewProps) => {
   return (
     <>
       <WorksContainer>
-        {projectData.map((data, index) => (
+        {projectData.map((data: ProjectInterface, index: number) => (
           <WorksItem key={index}>
             <WorksTitle>
               <Link href="https://dribbble.com/shuvrojit/collections/7198179-WRITELIKEPRO">
