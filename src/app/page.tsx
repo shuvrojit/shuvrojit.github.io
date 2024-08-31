@@ -31,7 +31,7 @@ export default function Home() {
         {"Creating software \nthat functions seamlessly."}
       </h1>
       <p className={styles.description}>
-        Hi, I&#39m Shuvro, a freelance product designer from Bangladesh.
+        Hi, I'm Shuvrojit, a freelance product designer from Bangladesh.
         Partnering with companies to create digital interfaces that play a
         crucial role in realising their objects for success.
       </p>
