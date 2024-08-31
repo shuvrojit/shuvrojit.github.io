@@ -2,8 +2,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Home.module.css";
+import Banner from "@/components/body/Banner";
+import ProjectView from "@/components/body/ProjectView";
+import { ProjectInterface } from "@/types";
 
 export default function Home() {
+  const data: ProjectInterface[] = [
+    {
+      name: "WRITELIKEPRO",
+      year: "2024",
+      description: "An AI keyboard with lots of custom features.",
+      platform: "Android & IOS",
+      role: "Full Stack Designer and Developer",
+      link: "#",
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <Image
@@ -17,9 +31,9 @@ export default function Home() {
         {"Creating software \nthat functions seamlessly."}
       </h1>
       <p className={styles.description}>
-        Hi, I'm Shuvro, a freelance product designer from Bangladesh. Partnering
-        with companies to create digital interfaces that play a crucial role in
-        realising their objects for success.
+        Hi, I&#39m Shuvro, a freelance product designer from Bangladesh.
+        Partnering with companies to create digital interfaces that play a
+        crucial role in realising their objects for success.
       </p>
       <div className={styles.social__links}>
         <p>email / shuvrojit.biswas17@gmail.com</p>
@@ -42,6 +56,12 @@ export default function Home() {
           <div className={styles.available__icon}></div>
           <p className={styles.available__text}>Available for September</p>
         </div>
+      </div>
+      <Banner />
+
+      <div className={styles.works_container}>
+        <h2>Recent Works</h2>
+        <ProjectView projectData={data} />
       </div>
     </div>
   );
